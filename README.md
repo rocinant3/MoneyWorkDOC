@@ -1,2 +1,1 @@
-# TraderNetClient
 # MoneyWorkDOC
