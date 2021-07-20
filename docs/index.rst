@@ -5,6 +5,7 @@
 ------
 A cool bit of code::
 
+
    Some cool Code
 
 .. code-block:: rst
@@ -16,7 +17,7 @@ A cool bit of code::
 Скрин с админки:
 
 
-.. image:: images/admin_main.png
-    :height: 100px
+.. image:: docs/images/admin_main.png
+    :height: 200px
     :width: 400px
 
