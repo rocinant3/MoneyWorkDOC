@@ -1,23 +1,17 @@
-Глава 1
-====
 
-Раздел 1
-------
-A cool bit of code::
+MoneyWork. Инструкция по эксплуатации
+=======================================
 
+Содержание
+-----------------
 
-   Some cool Code
+Contents
+--------
 
-.. code-block:: rst
-
-   A bit of **rst** which should be *highlighted* properly.
-
-
-`Ссылка на админку <https://mwrk.ru/admin/>`_
-Скрин с админки:
-
-
-.. image:: docs/images/admin_main.png
-    :height: 200px
-    :width: 400px
-
+```mermaid
+graph LR
+    A[Square Rect] -- Link text --> B((Circle))
+    A --> C(Round Rect)
+    B --> D{Rhombus}
+    C --> D
+```
