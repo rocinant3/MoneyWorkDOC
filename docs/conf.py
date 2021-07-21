@@ -73,5 +73,5 @@ latex_elements = {
 
 latex_documents = [
     ('index', 'Sphinx.tex', u'Документация',
-     u'Ромащенко Игорь', 'manual'),
+     u'Деньги работают', 'manual'),
 ]
