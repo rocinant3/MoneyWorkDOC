@@ -52,25 +52,25 @@ pygments_style = 'sphinx'
 html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-html_show_copyright = False
+# html_show_copyright = False
 
-latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    # 'papersize': 'letterpaper',
+# latex_elements = {
+#     # The paper size ('letterpaper' or 'a4paper').
+#     # 'papersize': 'letterpaper',
 
-    # The font size ('10pt', '11pt' or '12pt').
-    # 'pointsize': '10pt',
+#     # The font size ('10pt', '11pt' or '12pt').
+#     # 'pointsize': '10pt',
 
-    # Additional stuff for the LaTeX preamble.
-    'preamble': '\\usepackage[utf8]{inputenc}',
-    'babel': '\\usepackage[russian]{babel}',
-    'cmappkg': '\\usepackage{cmap}',
-    'fontenc': '\usepackage[T1,T2A]{fontenc}',
-    'utf8extra': '\\DeclareUnicodeCharacter{00A0}{\\nobreakspace}',
-}
+#     # Additional stuff for the LaTeX preamble.
+#     'preamble': '\\usepackage[utf8]{inputenc}',
+#     'babel': '\\usepackage[russian]{babel}',
+#     'cmappkg': '\\usepackage{cmap}',
+#     'fontenc': '\usepackage[T1,T2A]{fontenc}',
+#     'utf8extra': '\\DeclareUnicodeCharacter{00A0}{\\nobreakspace}',
+# }
 
 
-latex_documents = [
-    ('index', 'Sphinx.tex', u'Генератор документации Sphinx Documentation',
-     u'Дмитрий Мажарцев', 'manual'),
-]
+# latex_documents = [
+#     ('index', 'Sphinx.tex', u'Документация',
+#      u'Ромащенко Игорь', 'manual'),
+# ]
