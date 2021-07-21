@@ -44,28 +44,57 @@
             
   <section id="id1">
 <h1>Платежи<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id2">
+<h2>Тариф<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id3">
+<h3>Устанавливаем тариф<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Переходим в настройку <a class="reference external" href="https://mwrk.ru/admin/accounts/tariff/">тарифа</a></p>
+<img alt="_images/tariff.png" src="_images/tariff.png" />
+<p>Название ни на что не влияет, а <strong>цена определяет ежемесячный платеж</strong> в рублевом эквиваленте</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Цена меняется только в свежесозданных инвойсах  на оплату.
+Все старые остаются с предыдущей ценой</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Настройка существует в единственном экземпляре</p>
+</div>
+</section>
+<section id="id5">
+<h3>Сущность платежа<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://mwrk.ru/admin/merchant/payment/">Страница для мониторинга транзакций</a></p>
+<img alt="_images/invoice.png" src="_images/invoice.png" />
 <dl class="simple">
-<dt><a href="#id2"><span class="problematic" id="id3">``</span></a><a href="#id4"><span class="problematic" id="id5">`</span></a>mermaid</dt><dd><dl class="simple">
-<dt>graph LR</dt><dd><p>A[Square Rect] – Link text –&gt; B((Circle))
-A –&gt; C(Round Rect)
-B –&gt; D{Rhombus}
-C –&gt; D</p>
+<dt>Платеж может находится в трех состояниях:</dt><dd><ul class="simple">
+<li><p>Запрос</p></li>
+<li><p>Успех</p></li>
+<li><p>Ошибка</p></li>
+</ul>
 </dd>
 </dl>
-</dd>
-</dl>
-<p><a href="#id6"><span class="problematic" id="id7">``</span></a><a href="#id8"><span class="problematic" id="id9">`</span></a></p>
-<dl class="simple">
-<dt>&lt;div class=”mermaid”&gt;</dt><dd><dl class="simple">
-<dt>graph LR</dt><dd><p>A[Square Rect] – Link text –&gt; B((Circle))
-A –&gt; C(Round Rect)
-B –&gt; D{Rhombus}
-C –&gt; D</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>&lt;/div&gt;</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Руками менять значения не рекомендуется</p>
+</div>
+</section>
+<section id="id7">
+<h3>Алгоритм оплаты<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="mermaid">
+            graph TD
+    A[Запрос оплаты] --&gt; B{Есть инвойсы?};
+    B -- Да --&gt; C{Оплатить?};
+    B -- Нет --&gt; LU[Создаем инвойс в статусе Запрос]
+    LU --&gt; C;
+    C -- Да --&gt; D[Вбив карты];
+    C -- Нет --&gt; G[Удаляем инвойс];
+    D --&gt; S{Успешно?};
+    S -- Да --&gt; U[Статус Успех]
+    S -- Нет --&gt; I[Статус Ошибка]
+    U --&gt; F[Редирект в ЛК]
+    I --&gt; F
+        </div></section>
+</section>
 </section>
 
 
@@ -75,6 +104,19 @@ C –&gt; D</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Платежи</a><ul>
+<li><a class="reference internal" href="#id2">Тариф</a><ul>
+<li><a class="reference internal" href="#id3">Устанавливаем тариф</a></li>
+<li><a class="reference internal" href="#id5">Сущность платежа</a></li>
+<li><a class="reference internal" href="#id7">Алгоритм оплаты</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="content_managment.html"
                         title="previous chapter">Наполнение контентом</a></p>
@@ -119,7 +161,6 @@ C –&gt; D</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, rocinante.
     </div>
   </body>
 </html>
