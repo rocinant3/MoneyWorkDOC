@@ -42,6 +42,32 @@ master_doc = 'index'
 project = u'MoneyWork'
 copyright = u'2021, rocinante'
 
+latex_elements = {
+    # Additional stuff for the LaTeX preamble.
+    'preamble': "".join((
+                '\usepackage{shortvrb}',
+        '\usepackage[postscript]{ucs}',
+        '\usepackage{pstricks}',
+        '\usepackage[utf8x]{inputenc}',
+
+        '\DeclareUnicodeCharacter{2552}{╒}',
+
+        '\DeclareUnicodeCharacter{2560}{╞}',
+
+        '\DeclareUnicodeCharacter{2558}{╘}',
+
+        '\DeclareUnicodeCharacter{2567}{╧}',
+
+        '\DeclareUnicodeCharacter{2569}{╪}',
+
+        '\DeclareUnicodeCharacter{2550}{═}'
+        '\DeclareUnicodeCharacter{00A0}{ }',  # NO-BREAK SPACE
+        # BOX DRAWINGS LIGHT VERTICAL AND RIGHT
+        '\DeclareUnicodeCharacter{251C}{+}',
+        '\DeclareUnicodeCharacter{2514}{+}',  # BOX DRAWINGS LIGHT UP AND RIGHT
+    )),
+}
+
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
