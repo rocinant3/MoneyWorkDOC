@@ -1,17 +1,16 @@
-
-MoneyWork. Инструкция по эксплуатации
-=======================================
+Документация MoneyWork 
+===
 
 Содержание
------------------
+---
+.. toctree::
+    :maxdepth: 2
+    :glob:
 
-Contents
---------
+    main_setup
+    content_managment
+    payments
+    telegram
+    support
 
-```mermaid
-graph LR
-    A[Square Rect] -- Link text --> B((Circle))
-    A --> C(Round Rect)
-    B --> D{Rhombus}
-    C --> D
-```
+    
