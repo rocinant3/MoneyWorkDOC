@@ -15,6 +15,8 @@
 .. image:: _static/support/webinar_request.png
 
 
+
+
 Запись в админке:
 
 .. image:: _static/support/webinar_admin.png
