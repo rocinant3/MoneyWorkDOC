@@ -95,10 +95,6 @@ else:
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-html_theme_options = {
-    'collapse_navigation': False,
-}
-
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 
@@ -170,10 +166,6 @@ htmlhelp_basename = 'MoneyWorkDOC'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
-latex_documents = [
-    ('index', ),
-]
-
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 #latex_logo = None
