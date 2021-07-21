@@ -60,7 +60,6 @@ copyright = u'2021, rocinante'
 
 # List of directories, relative to source directory, that shouldn't be searched
 # for source files.
-exclude_trees = []
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -82,23 +81,22 @@ pygments_style = 'sphinx'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+if on_rtd:
+    html_theme = 'default'
+else:
+    html_theme = 'nature'
 
 # -- Options for HTML output ---------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
-import sphinx_rtd_theme
-
-html_theme = "sphinx_rtd_theme"
-
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-   'collapse_navigation': False,
-
+    'collapse_navigation': False,
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -162,7 +160,6 @@ html_theme_options = {
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'MoneyWorkDOC'
 
-
 # -- Options for LaTeX output --------------------------------------------------
 
 # The paper size ('letter' or 'a4').
@@ -174,7 +171,7 @@ htmlhelp_basename = 'MoneyWorkDOC'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', ),
+    ('index', ),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
