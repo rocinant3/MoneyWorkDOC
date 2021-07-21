@@ -44,6 +44,64 @@
             
   <section id="id1">
 <h1>Телеграм<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id2">
+<h2>Подключаем бота<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id3">
+<h3>Через ЛК<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>После регистрации пользователь может подключить телеграм бота.
+В ЛК ставновится кликабельной кнопка:</p>
+<img alt="_images/tg_button.png" src="_images/tg_button.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Кнопка содержит ссылку с уникальным кодом следующего вида:</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://telegram.me/comon_tg_bot?start=46e15db7661d0663</span></code></p>
+<p>Код позволяет идентифицировать пользователя и связать его учетную запись в тг с учетной записью в MoneyWork.</p>
+</div>
+<p>После клика происходит редирект в телеграм. И если нажать <code class="docutils literal notranslate"><span class="pre">/start</span></code> - мы успешно заинтегрируем пользователя:</p>
+<img alt="_images/bot_connected.png" src="_images/bot_connected.png" />
+</section>
+<section id="id4">
+<h3>Через бота напрямую<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Если случайный пользователь откроет бота,
+то при попытке интерактива,
+ему предложат регистрацию на сайте:</p>
+<img alt="_images/start_bot.png" src="_images/start_bot.png" />
+</section>
+<section id="id5">
+<h3>Базовые команды<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/commands.png" src="_images/commands.png" />
+<dl>
+<dt>Cуществует три команды:</dt><dd><ul class="simple">
+<li><p>/start</p></li>
+<li><p>/account</p></li>
+<li><p>/support</p></li>
+</ul>
+<p>Команда  <code class="docutils literal notranslate"><span class="pre">/start</span></code> описана выше</p>
+<p>Команда <code class="docutils literal notranslate"><span class="pre">/account</span></code> выдает пользователю данные его профиля со статусами по подписке:</p>
+<img alt="_images/bot_account.png" src="_images/bot_account.png" />
+<p>Команда <code class="docutils literal notranslate"><span class="pre">/support</span></code> служит мостиком между тех поддержкой и пользователем</p>
+<p>Алгоритм работы следующий:</p>
+<div class="mermaid">
+            graph TD
+    A[Команда /support] --&gt; B[Просьба описать вопрос];
+    B --&gt; C[Ввод вопроса];
+    C --&gt; Y{Отправить вопрос?}
+    Y -- Да --&gt; E[Отправка вопроса в саппорт]
+    E --&gt; G
+    Y -- Нет --&gt; G[Завершение]
+        </div></dd>
+</dl>
+<p>Пример из интерфейса:</p>
+<p>Вопрос от пользователя:</p>
+<img alt="_images/bot_support_ask.png" src="_images/bot_support_ask.png" />
+<p>Ответ от тех-поддержки через бота:</p>
+<img alt="_images/bot_support_answer.png" src="_images/bot_support_answer.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Описание работы тех-поддержки в другом разделе</p>
+</div>
+</section>
+</section>
 </section>
 
 
@@ -53,6 +111,19 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Телеграм</a><ul>
+<li><a class="reference internal" href="#id2">Подключаем бота</a><ul>
+<li><a class="reference internal" href="#id3">Через ЛК</a></li>
+<li><a class="reference internal" href="#id4">Через бота напрямую</a></li>
+<li><a class="reference internal" href="#id5">Базовые команды</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="payments.html"
                         title="previous chapter">Платежи</a></p>
