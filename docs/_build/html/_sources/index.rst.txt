@@ -15,4 +15,5 @@
    payments
    telegram
    support
+   notifications
 
