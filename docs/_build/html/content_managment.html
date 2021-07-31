@@ -180,6 +180,45 @@
 </div>
 <p>Жмем <code class="docutils literal notranslate"><span class="pre">Сохранить</span></code></p>
 </section>
+<section id="id19">
+<h3>Пример отображения<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/stats_o.png" src="_images/stats_o.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Срок высчитывается как численная разница между датами входа и выхода</p>
+</div>
+</section>
+</section>
+<section id="id20">
+<h2>Визуальный редактор текста<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/wysiwyg_admin.png" src="_images/wysiwyg_admin.png" />
+<p>Редактор доступен для полей описания <strong>Идей</strong>, <strong>Акций</strong> и <strong>Тренингов</strong></p>
+<section id="emoji">
+<h3>Поддержка emoji<a class="headerlink" href="#emoji" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/emoji.gif" src="_images/emoji.gif" />
+<p>Набираем “:” и название нужного эмодзи. В модальном окне подтвердаем выбор</p>
+<p><a class="reference external" href="https://gist.github.com/rxaviers/7360908">Полный список</a> эмодзи и их символьных кодировок</p>
+</section>
+<section id="id22">
+<h3>Отображение на основном фронтенде<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<p>Без потерь в разметки.</p>
+</section>
+<section id="id23">
+<h3>Отображение телеграме<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<p>Сообщения телеграма частично поддерживают разметку html и markdown, а именно стили текста, перенос строк и эмодзи.
+Не поддерживаются: маркированные перечисления, цветовыделения, разметка отступов.
+<a class="reference external" href="https://sendpulse.com/blog/telegram-text-formatting">Почитать можно тут</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Для обеспечения совместимости разметок - фронтенда и телеграма был написан адаптор,
+оставляющий для в разметке для телеграма лишь поддерживаемые им тэги.</p>
+</div>
+<p><strong>Пример адаптации</strong></p>
+<p>Отображение на фронте:</p>
+<img alt="_images/wysywyg_admin_1.png" src="_images/wysywyg_admin_1.png" />
+<p>Отображение в тг:</p>
+<img alt="_images/wysiwyg_tg.png" src="_images/wysiwyg_tg.png" />
+</section>
 </section>
 </section>
 
@@ -212,6 +251,13 @@
 </li>
 <li><a class="reference internal" href="#id16">Статистика</a><ul>
 <li><a class="reference internal" href="#id17">Создание отдельной записи</a></li>
+<li><a class="reference internal" href="#id19">Пример отображения</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id20">Визуальный редактор текста</a><ul>
+<li><a class="reference internal" href="#emoji">Поддержка emoji</a></li>
+<li><a class="reference internal" href="#id22">Отображение на основном фронтенде</a></li>
+<li><a class="reference internal" href="#id23">Отображение телеграме</a></li>
 </ul>
 </li>
 </ul>
